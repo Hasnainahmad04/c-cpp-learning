@@ -1,5 +1,5 @@
+// Factorial With Valid Input
 #include <iostream>
-
 using namespace std;
 
 int fact(int n)
@@ -9,11 +9,8 @@ int fact(int n)
     {
         return 1;
     }
-    // Recursive Step
-    else
-    {
-        return n * fact(n - 1);
-    }
+
+    return n * fact(n - 1);
 }
 
 int getInput()
@@ -34,6 +31,7 @@ int getInput()
     } while (num < 0 && (proceed == 'Y' || proceed == 'y'));
     return num;
 }
+
 int main()
 {
     int n;

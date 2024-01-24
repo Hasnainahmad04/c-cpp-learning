@@ -1,21 +1,26 @@
+// Simple Factorial
 #include <iostream>
 using namespace std;
 
-int fact(int n) {
+long fact(int n)
+{
     // Base Step: if n reach 0 return 1
-    if (n == 0) {
+    if (n == 0)
+    {
         return 1;
     }
-    // Recursive Step
-    else {
-        return n * fact(n - 1);
-    }
+
+    return n * fact(n - 1);
+
+    // using Ternary: return n == 0 ? 1 : n * fact(n-1);
 }
 
-int main() {
+int main()
+{
     int n;
     cout << "Please Enter A Number: ";
     cin >> n;
-    cout << "factorial of " << n << " is " << fact(n);
+    long result = fact(n);
+    cout << "factorial of " << n << " is " << result;
     return 0;
 }

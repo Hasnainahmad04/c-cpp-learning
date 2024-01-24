@@ -1,22 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int pow(int a, int n)
+int power(int num, int pow)
 {
-  if (n == 0)
+  if (num == 0)
   {
     return 1;
   }
-  else
-  {
-    return a * pow(a, n - 1);
-  }
+
+  return num * power(num, pow - 1);
 }
 
 int main()
 {
-  int a = 3, n = 3;
-  int result = pow(a, n);
+  int num = 3, pow = 3;
+  int result = power(num, pow);
   cout << "Result is: " << result;
   return 0;
 }
